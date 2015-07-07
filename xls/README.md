@@ -3,7 +3,7 @@ MS Excel Sensor Data Viewer App
 
 ## 概要
 
-このアプリケーションは、ServiceSyncサーバーのDBに保存されたセンサデータを閲覧することのできるXLSMファイルです。
+このアプリケーションは、ServiceSyncサーバーのDBに保存されたセンサデータを閲覧するXLSMファイルです。
 ServiceSync ServerへアクセスするためにMOAT REST APIを使用します。
 
 ## ディレクトリ構成
@@ -15,12 +15,11 @@ ${XLS_ROOT}
 ├── README.md
 ├── xls_dataviewer.xlsm 
 ```
-
 ## スクリプト
 
 このパッケージは、以下のスクリプトを含んでいます。
 
-- `xls_dataviewer.xlsm`: ゲートウェイアプリからアップロードされたデータを、DBに保存するスクリプトです。
+- "xls_dataviewer.xlsm": ゲートウェイアプリからアップロードされたデータを、DBに保存するスクリプトです。
 
 ## モデル
 
@@ -30,13 +29,8 @@ ${XLS_ROOT}
 | humidity | 湿度です。`float`型です。 |
 | timestamp | 収集した時刻のミリ秒表現です。`int64`型です。 |
 
-## コマンド
-
-<<<<<<< HEAD
 ### セットアップ (MS Excel 2010)
-=======
-### セットアップ
->>>>>>> 5fbd34ecb239a91015a3c7e4efcc3e17469a928f
+
 MS Excel上でVBエディタを起動するには、[ファイル] -> [オプション] -> [リボンのユーザー設定]から"開発"にチェックを
 入れ、有効化してください。
 その後、ツールバーより"開発"タブを選択し、"Visual Basic"アイコンをクリックするとエディタが起動します。
@@ -44,7 +38,6 @@ MS Excel上でVBエディタを起動するには、[ファイル] -> [オプシ
 本アプリのマクロ内ではDictionaryオブジェクトを使用しています。
 オブジェクトを使用するために、MS Excel VBエディタの[ツール] -> [参照設定]より、"Microsoft Scripting Runtime"を選択し、有効化してください。
 
-<<<<<<< HEAD
 "Config"シートから、各パラメータを記入してください。
 　-MOAT REST API URI: MOAT REST APIのエンドポイントです。サーバー管理者へ確認してください。また、弊社のトライアル環境をご使用の場合は http://www.servicesync.net/contact/ よりお問い合わせください。
   -App ID: ServiceSync Web コンンソールの ［設定］−［IIDN設定］から確認できす。
@@ -105,7 +98,7 @@ MS Excelにて起動するとデータビューアのフォームが起動しま
  ' SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  ' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 =======
->>>>>>> 5fbd34ecb239a91015a3c7e4efcc3e17469a928f
+
 ## 変更履歴
 
 ### 1.0.0 Jul 9, 2015

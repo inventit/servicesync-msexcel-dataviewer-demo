@@ -30,7 +30,7 @@ for (var i = 0; i < size; i++) {
   session.log(TAG, 'temperature = ' + container.temperature);
   session.log(TAG, 'humidity = ' + container.humidity);
   session.log(TAG, 'timestamp = ' + container.timestamp);
-  save(session,database, container);
+  save(session, database, container);
 }
 
 var datum = objects[0];
