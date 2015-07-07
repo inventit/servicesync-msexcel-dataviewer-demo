@@ -1,5 +1,3 @@
-require('dotenv').load();
-
 module.exports = function(grunt) {
 
   grunt.initConfig({
@@ -48,20 +46,6 @@ module.exports = function(grunt) {
         ]
       }
     },
-    replace: {
-      dist: {
-        options: {
-          patterns: [
-            { match: 'AWS_ENDPOINT', replacement: process.env.AWS_ENDPOINT },
-            { match: 'AWS_ACCESS_KEY_ID', replacement: process.env.AWS_ACCESS_KEY_ID },
-            { match: 'AWS_SECRET_ACCESS_KEY', replacement: process.env.AWS_SECRET_ACCESS_KEY }
-          ]
-        },
-        files: [
-          { expand: true, flatten: true, src: ['build/*.js'], dest: 'build' }
-        ]
-      }      
-    },
     compress: {
       main: {
         options: {
@@ -81,9 +65,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-compress');
-  grunt.loadNpmTasks('grunt-replace');
 
-  grunt.registerTask('build', ['jshint', 'nodeunit', 'uglify', 'copy:pack', 'replace']);
+  grunt.registerTask('build', ['jshint', 'nodeunit', 'uglify', 'copy:pack']);
   grunt.registerTask('pack', ['clean', 'build', 'compress']);
   grunt.registerTask('default', ['build', 'jsdoc']);
 

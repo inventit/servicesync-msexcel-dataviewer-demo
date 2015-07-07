@@ -21,8 +21,8 @@
 #include <string.h>
 #include <servicesync/moat.h>
   
-#define TAG "SSCW"
-#define UPLOAD_INTERVAL (60) /* sec */
+#define TAG "SSXLS"
+#define UPLOAD_INTERVAL (10) /* sec */
 #define MODEL_NAME "SensingData"
   
 typedef struct {

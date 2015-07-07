@@ -19,7 +19,7 @@ module.exports = nodeUnit.testCase({
         session = context.session;
 
     // Setup the dummy data
-    var objs = [{firstname: 'John', lastname: 'Doe'}];
+    var objs = {temperature: '26.5', humidity: '40', timestamp: '9876', uid: '1234'};
     context.setObjects(objs);
 
     session.fetchUrlSync.returns({responseCode: 200});

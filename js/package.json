@@ -1,7 +1,7 @@
 {
-  "name": "sscw",
+  "name": "ssxls",
   "version": "1.0.0",
-  "description": "ServiceSync CloudWatch demo project",
+  "description": "ServiceSync MSExcel data viewer demo project",
   "maintainers": [
     "Inventit <egypt@yourinventit.com>"
   ],
