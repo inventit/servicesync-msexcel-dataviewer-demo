@@ -1,10 +1,10 @@
-ServiceSync CloudWatch 連携アプリ
+ServiceSync, MS Excel連携デモアプリ
 =======================
 
 ## 概要
 
-このアプリケーションは、[ServiceSync](https://developers.servicesync.net/)と[Amazon CloudWatch](http://aws.amazon.com/jp/cloudwatch/)との連携アプリです。
-ゲートウェイで収集したセンサーデータを、CloudWatchに送信し、CloudWatchのコンソールでデータを閲覧することが出来ます。
+このアプリケーションはServiceSyncとMS Excelとを連携させるデモンストレーション用のアプリです。
+ゲートウェイで収集したセンサデータを、ServerのDataBaseに保存し、Windows上のMS Excelからデータを閲覧することが出来ます。
 
 ## ディレクトリ構成
 
@@ -13,13 +13,14 @@ ServiceSync CloudWatch 連携アプリ
 ├── README.md
 ├── c .................. (1)
 └── js ................. (2)
+└── xls ................ (3)
 ```
-
 - (1) ゲートウェイアプリが配置されています。詳細については、`c/README.md`を参照してください。
 - (2) サーバーアプリが配置されています。詳細については、`js/README.md`を参照してください。
+- (3) データビューアアプリが配置されています。詳細については、`xls/README.md`を参照してください。
 
 ## 変更履歴
 
-### 1.0.0 Jun 26, 2015
+### 1.0.0 Jul 9, 2015
 
 - イニシャルリリース

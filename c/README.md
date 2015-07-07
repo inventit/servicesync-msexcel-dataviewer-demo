@@ -1,8 +1,8 @@
-ServiceSync CloudWatch Gateway App
+ServiceSync Gateway App
 ========
 
 ## 概要
-ServiceSyncとCloudWatch連携のゲートウェイアプリです。
+ServiceSyncとMS Excelファイルを連携させるためのデモ用ゲートウェイアプリです。
 このアプリケーションは、定期的にセンサーデータを収集しアップロードします。
 
 ##事前準備
@@ -16,12 +16,11 @@ ServiceSyncとCloudWatch連携のゲートウェイアプリです。
  |-------------|-----------------|
  | temperature  | 温度(℃)です。0.0 - 40.0のランダムな値です。 |
  | humidity  | 湿度(%)です。0.0 - 100.0のランダムな値です。 |
- | timestamp  | センサーデータの収集時刻です。ISO8601形式の文字列です。 |
+ | timestamp  | センサーデータの収集時刻です。|
 
 ## アップロード周期
 
-アップロード周期は、`sscw.c`にて、定数で定義されています。ここを変更するとアップロード周期を変更することが出来ますが、
-CloudWatchの制約上、あまりにも短い間隔ではアップロードすることは出来ません。制約については、[CloudWatchの制限](http://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html)を確認してください。
+アップロード周期は、`ssxls.c`にて、定数で定義されています。
 
 ```
 #define UPLOAD_INTERVAL (60) /* sec */
@@ -41,7 +40,7 @@ ${MOATC_ROOT}
 ├── package
 │   └── package.json
 ├── src
-│   └── sscw.c … クライアントアプリケーション本体
+│   └── ssxls.c … クライアントアプリケーション本体
 ├── test
 └── tools
 ```
@@ -72,10 +71,10 @@ $ ./configure
 $ make
 $ make package
 
-`sscw-<version>-<cpu type>.zip`が作成されます。
+`ssxls-<version>-<cpu type>.zip`が作成されます。
 
 ## 変更履歴
 
-### 1.0.0 Jun 26, 2015
+### 1.0.0 Jul 9, 2015
 
 - イニシャルリリース
