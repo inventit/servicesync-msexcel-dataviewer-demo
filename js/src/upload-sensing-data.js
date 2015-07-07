@@ -12,10 +12,6 @@ var moat = require('moat'),
     clientRequest = context.clientRequest,
     database = context.database;
 
-var aws_endpoint = '@@AWS_ENDPOINT',
-    aws_access_key_id = '@@AWS_ACCESS_KEY_ID',
-    aws_secret_access_key = '@@AWS_SECRET_ACCESS_KEY';
-
 session.log(TAG, 'Start!');
 
 var objects = clientRequest.objects;
@@ -29,7 +25,7 @@ if (size === 0) {
 }
 
 //Store the data into database
-for(var i = 0; i < size; i++){
+for (var i = 0; i < size; i++) {
   var container = objects[i];
   session.log(TAG, 'temperature = ' + container.temperature);
   session.log(TAG, 'humidity = ' + container.humidity);
@@ -40,14 +36,13 @@ for(var i = 0; i < size; i++){
 var datum = objects[0];
 session.log(TAG, JSON.stringify(datum));
 
-
 //Store the given model object into the database
-function save(session, database, entity){
+function save(session, database, entity) {
   var result;
-  if(entity.uid){
+  if (entity.uid) {
     //try to find
     var array = database.queryByUids('SensingData', [entity.uid]);
-    if(array && array.length > 0){
+    if (array && array.length > 0) {
       //Copy revision
       entity.rev = array[0].rev;
     } else {

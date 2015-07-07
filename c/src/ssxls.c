@@ -22,7 +22,7 @@
 #include <servicesync/moat.h>
   
 #define TAG "SSXLS"
-#define UPLOAD_INTERVAL (10) /* sec */
+#define UPLOAD_INTERVAL (60) /* sec */
 #define MODEL_NAME "SensingData"
   
 typedef struct {
@@ -35,7 +35,7 @@ typedef struct {
 } UserContext;
   
 static void
-get_sensor_data(SensingData* out_sensor_data){
+get_sensor_data(SensingData* out_sensor_data) {
   /* Temperature changes 0 - 40 */
   out_sensor_data->temperature = rand() % 41;
   
@@ -44,7 +44,7 @@ get_sensor_data(SensingData* out_sensor_data){
 }
   
 static void
-upload_sensor_data_result_proc(Moat in_moat, sse_char *in_urn, sse_char *in_model_name, sse_int in_request_id, sse_int in_result, sse_pointer in_user_data){
+upload_sensor_data_result_proc(Moat in_moat, sse_char *in_urn, sse_char *in_model_name, sse_int in_request_id, sse_int in_result, sse_pointer in_user_data) {
   if (in_result == SSE_E_OK) {
     MOAT_LOG_INFO(TAG, "moat_send_notificaion() has been complated.");
   } else {
@@ -54,7 +54,7 @@ upload_sensor_data_result_proc(Moat in_moat, sse_char *in_urn, sse_char *in_mode
   
   
 static sse_bool
-upload_sensor_data(sse_int in_timer_id, sse_pointer in_user_data){
+upload_sensor_data(sse_int in_timer_id, sse_pointer in_user_data) {
   sse_int urn_err;
   sse_int request_id;
   MoatObject* object = NULL;
@@ -97,7 +97,7 @@ upload_sensor_data(sse_int in_timer_id, sse_pointer in_user_data){
   
   
 sse_int
-moat_app_main(sse_int in_argc, sse_char *argv[]){
+moat_app_main (sse_int in_argc, sse_char *argv[]) {
   Moat moat = NULL;
   MoatTimer* timer = NULL;
   sse_int timer_id;
@@ -105,7 +105,7 @@ moat_app_main(sse_int in_argc, sse_char *argv[]){
   UserContext* ctx;
   sse_int err = SSE_E_OK;
       
-  err = moat_init(argv[0], &moat);
+  err = moat_init (argv[0], &moat);
   if (err != SSE_E_OK) {
     goto error_exit;
   }
