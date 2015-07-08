@@ -76,8 +76,6 @@ ServiceSync, MS Excel連携デモアプリ
 ' SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 
->>>>>>> 5fbd34ecb239a91015a3c7e4efcc3e17469a928f
-
 ## 変更履歴
 
 ### 1.0.0 Jul 9, 2015
