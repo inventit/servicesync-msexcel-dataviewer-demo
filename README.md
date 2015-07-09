@@ -7,18 +7,20 @@ ServiceSync, MS Excel連携デモアプリ
 ゲートウェイで収集したセンサデータを、ServerのDataBaseに保存し、Windows上のMS Excelからデータを閲覧することが出来ます。  
   
 ## ディレクトリ構成
+````
 .  
 ├── README.md  
 ├── c .................. (1)  
-└── js ................. (2)  
+├── js ................. (2)  
 └── xls ................ (3)  
+````
 - (1) ゲートウェイアプリが配置されています。詳細については、`c/README.md`を参照してください。  
 - (2) サーバーアプリが配置されています。詳細については、`js/README.md`を参照してください。  
 - (3) データビューアアプリが配置されています。詳細については、`xls/README.md`を参照してください。  
-  
+
 ##ライセンス
 本アプリケーションでは次のオープンソースソフトウェアを使用しています。  
-  
+````
 ' VBA-JSON v1.0.2  
 ' (c) Tim Hall - https://github.com/VBA-tools/VBA-JSON  
 '  
@@ -62,7 +64,8 @@ ServiceSync, MS Excel連携デモアプリ
 ' (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS  
 ' SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  
 ' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   
-  
+````
+
 ## 変更履歴
 
 ### 1.0.0 Jul 9, 2015
