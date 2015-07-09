@@ -16,7 +16,7 @@ ServiceSync ServerへアクセスするためにMOAT REST APIを使用します�
 ```
 ${XLS_ROOT}
 ├── README.md
-├── xls_dataviewer.xlsm 
+└── xls_dataviewer.xlsm 
 ```
 ## スクリプト
 
