@@ -27,14 +27,9 @@ if (size === 0) {
 //Store the data into database
 for (var i = 0; i < size; i++) {
   var container = objects[i];
-  session.log(TAG, 'temperature = ' + container.temperature);
-  session.log(TAG, 'humidity = ' + container.humidity);
-  session.log(TAG, 'timestamp = ' + container.timestamp);
+  session.log(TAG, JSON.stringify(container));
   save(session, database, container);
 }
-
-var datum = objects[0];
-session.log(TAG, JSON.stringify(datum));
 
 //Store the given model object into the database
 function save(session, database, entity) {
@@ -49,7 +44,7 @@ function save(session, database, entity) {
       result = database.insert(entity);
     }
   } else {
-  result = database.insert(entity);
+    result = database.insert(entity);
   }
   //The inserted object is internally associated with the device where the data origins.
   session.log(TAG, 'The object@uid:' + result.uid + 'has been saved to the database.');

@@ -6,6 +6,9 @@ MS Excel Sensor Data Viewer App
 このアプリケーションは、ServiceSyncサーバーのDBに保存されたセンサデータを閲覧するXLSMファイルです。
 ServiceSync ServerへアクセスするためにMOAT REST APIを使用します。
 
+##動作条件
+本アプリケーションはMicrosoft Excel 2010での動作が確認されています。
+
 ## ディレクトリ構成
 
 ディレクトリ構成は、以下に示す通りです。以降、ルートディレクトリを、`${XLS_ROOT}`と表記します。
@@ -19,7 +22,7 @@ ${XLS_ROOT}
 
 このパッケージは、以下のスクリプトを含んでいます。
 
-- "xls_dataviewer.xlsm": ゲートウェイアプリからアップロードされたデータを、DBに保存するスクリプトです。
+- "xls_dataviewer.xlsm": サーバーに保存されたセンサデータを取得し、グラフに描画するxlsmファイルです。
 
 ## モデル
 
