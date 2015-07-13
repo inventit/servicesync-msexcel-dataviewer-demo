@@ -3,8 +3,8 @@ Sensor Data Viewer
 
 ## 概要
 
-このアプリケーションは、ServiceSyncサーバーのDBに保存されたセンサデータを閲覧するXLSMファイルです。
-ServiceSync ServerへアクセスするためにMOAT REST APIを使用します。
+このアプリケーションは、ServiceSyncサーバーのデータベースに保存されたセンサデータを可視化するXLSMファイルです。
+ServiceSyncサーバーへアクセスするためにMOAT REST APIを使用します。
 
 ##動作条件
 本アプリケーションはMicrosoft Excel 2010での動作が確認されています。
@@ -34,25 +34,23 @@ ${XLS_ROOT}
 
 ### セットアップ (MS Excel 2010)
 
-- MS Excel上でVBエディタを起動するには、[ファイル] -> [オプション] -> [リボンのユーザー設定]から"開発"にチェックを
-入れ、有効化してください。
+- MS Excel上でVBエディタを起動できるように設定します。[ファイル] -> [オプション] -> [リボンのユーザー設定]から"開発"にチェックを入れ、有効化してください。
 その後、ツールバーより"開発"タブを選択し、"Visual Basic"アイコンをクリックするとエディタが起動します。
 
-- 本アプリのマクロ内ではDictionaryオブジェクトを使用しています。
-オブジェクトを使用するために、MS Excel VBエディタの[ツール] -> [参照設定]より、"Microsoft Scripting Runtime"を選択し、有効化してください。
+- マクロ内で使用しているDictionaryオブジェクトのために、MS Excel VBエディタの[ツール] -> [参照設定]より、"Microsoft Scripting Runtime"を選択し、有効化してください。
 
 - "Config"シートから、各パラメータを記入してください。
 　- MOAT REST API URI: MOAT REST APIのエンドポイントです。サーバー管理者へ確認してください。また、弊社のトライアル環境をご使用の場合は http://www.servicesync.net/contact/ よりお問い合わせください。
   - App ID: ServiceSync Web コンンソールの ［設定］−［IIDN設定］から確認できす。
   - Client ID: ServiceSync Web コンンソールの ［設定］−［IIDN設定］から確認できす。
   - Client Secret ID: ServiceSync Web コンンソールの ［設定］−［IIDN設定］から確認できす。
-  - Device Name: 現在未使用です。
+  - Device Name: ServiceSyncクライアントで初回起動した時に自動的に設定されデバイスIDです。クライアントで次のコマンドで確認できます。　cat /opt/inventit/ssegw/res/device_name
   - Package ID: パッケージ名です。本サンプルでは"ssxls"と記入してください。
   - Model Name: モデル名です。本サンプルでは"SensingData"と記入してください。
-  - Default Limit: １グラフにおけるデータ表示数です。
+  - Default Limit: 一度に取得する最大データ数です。
 
-- MS Excelにて起動するとデータビューアのフォームが起動します。
-また、"GUI"シートに配置されているボタンをクリックしてもフォームは起動します。
+- MS Excelにて起動するとセンサデータビューアのフォームが起動します。
+また、"GUI"シートに配置されているボタンをクリックしてもフォームを起動することができます。
 
 ###ライセンス
 本アプリケーションでは次のオープンソースソフトウェアを使用しています。
@@ -107,6 +105,6 @@ ${XLS_ROOT}
 
 ## 変更履歴
 
-### 1.0.0 Jul 9, 2015
+### 1.0.0 Jul 13, 2015
 
 - イニシャルリリース
