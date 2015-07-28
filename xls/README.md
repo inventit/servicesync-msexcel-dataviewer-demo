@@ -5,7 +5,7 @@ Sensor Data Viewer
 
 このアプリケーションは、ServiceSyncサーバーのデータベースに保存されたセンサデータを可視化するXLSMファイルです。
 ServiceSyncサーバーへアクセスするために[MOAT REST API](https://developers.servicesync.net/?page_id=90)を使用します。
-[MOAT REST API](https://developers.servicesync.net/?page_id=90)のSEARCH機能を使うことで、データ検索をすることができます。
+[MOAT REST API](https://developers.servicesync.net/?page_id=90)の[SEARCH機能](https://developers.servicesync.net/?page_id=90#i-12)を使うことで、データ検索をすることができます。
 
 ##動作条件
 本アプリケーションはMicrosoft Excel 2010での動作が確認されています。
@@ -53,7 +53,7 @@ ${XLS_ROOT}
 - MS Excelにて起動するとセンサデータビューアのフォームが起動します。
 また、"GUI"シートに配置されているボタンをクリックしてもフォームを起動することができます。
 
-##センサデータビューアの画面構成
+##[センサデータビューアの画面構成](https://developers.servicesync.net/?page_id=943&preview=true&preview_id=943&preview_nonce=3e4f525d8f#GUI)
 センサデータビューアはデータ取得ボタンを持つMainフレームと、取得データの検索条件を入力するクエリ条件タブ、フィルタ・ソートタブで構成されます。
 ###Mainフレーム
 - ”最初へ”ボタンをクリックするとサーバーのデータベースから指定データ個数分データを取得することができます。

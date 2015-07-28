@@ -5,7 +5,7 @@ ServiceSync, MS Excel連携デモアプリ
 
 このアプリケーションはServiceSyncとMS Excelを連携させたデモ用アプリです。  
 ゲートウェイで収集したセンサデータをServiceSyncサーバーのデータベースへ保存し、WindowsのMS Excelからデータを閲覧することが出来ます。  
-またセンサデータビューアは[MOAT REST API](https://developers.servicesync.net/?page_id=90)のSEARCH機能を使用することによってデータ検索ができます。
+またセンサデータビューアは[MOAT REST API](https://developers.servicesync.net/?page_id=90)の[SEARCH機能](https://developers.servicesync.net/?page_id=90#i-12)を使用することによってデータ検索ができます。
 
 ## ディレクトリ構成
 ````
